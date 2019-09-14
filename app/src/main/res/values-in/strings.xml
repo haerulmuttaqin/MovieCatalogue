@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">Popular Movie 2019</string>
+    <string name="overview">KILASAN SINGKAT</string>
+    <string name="banner">banner</string>
+    <string name="change_language_settings">Pengaturan Ubah Bahasa</string>
+    <string name="movies">Film</string>
+    <string name="tv_shows">Acara TV</string>
+
+    <!--DATA-->
+    <!--movies-->
+    <string-array name="movie_title">
+        <item>Fast &amp; Furious Presents: Hobbs &amp; Shaw</item>
+        <item>The Lion King</item>
+        <item>Men in Black: International</item>
+        <item>Avengers: Endgame</item>
+        <item>Red Shoes and the Seven Dwarfs</item>
+        <item>Hello, Love, Goodbye</item>
+        <item>Angel Has Fallen</item>
+        <item>Good Boys</item>
+        <item>John Wick: Chapter 3 – Parabellum</item>
+        <item>Godzilla: King of the Monsters</item>
+    </string-array>
+
+    <string-array name="movie_description">
+        <item>Sebuah spin-off dari The Fate of the Furious, dengan fokus pada Agen Keamanan Diplomatik AS Luke Luke, Hobbs membentuk aliansi yang tidak mungkin dengan Stardam\'s Deckard Shaw. </item>
+        <item>Simba mengidolakan ayahnya, Raja Mufasa, dan mengambil hati takdir kerajaannya sendiri. Tapi tidak semua orang di kerajaan merayakan kedatangan anak baru itu. Scar, saudara lelaki Mufasa — dan mantan pewaris takhta — memiliki rencana sendiri. Pertempuran untuk Pride Rock dirusak dengan pengkhianatan, tragedi dan drama, yang akhirnya menghasilkan pengasingan Simba. Dengan bantuan dari sepasang teman yang baru ditemukan, Simba harus mencari cara untuk tumbuh dan mengambil kembali apa yang menjadi haknya. </item>
+        <item>The Men in Black selalu melindungi Bumi dari sampah alam semesta. Dalam petualangan baru ini, mereka menangani ancaman terbesar, paling global hingga saat ini: tikus dalam organisasi Men in Black. </item>
+        <item>Setelah peristiwa yang menghancurkan dari Avengers: Perang Infinity, alam semesta hancur karena upaya Titan Gila, Thanos. Dengan bantuan sekutu yang tersisa, Avengers harus berkumpul sekali lagi untuk membatalkan tindakan Thanos dan memulihkan ketertiban ke alam semesta sekali dan untuk semua, tidak peduli konsekuensi apa yang mungkin ada di toko. </item>
+        <item>Pangeran yang telah berubah menjadi Dwarf mencari sepatu merah seorang wanita untuk memecahkan mantera, meskipun itu tidak akan mudah. ​​</item>
+        <item>Kisah cinta Joy dan Ethan, pekerja Filipina yang berbasis di Hong Kong. Ethan, seorang bartender, sangat ingin mengejar Joy, seorang pembantu rumah tangga yang sepenuhnya berdedikasi untuk menyediakan nafkah bagi keluarganya. </item>
+        <item>Agen Layanan Rahasia Mike Banning dijebak untuk percobaan pembunuhan Presiden dan harus menghindari agensinya sendiri dan FBI ketika ia mencoba mengungkap ancaman sebenarnya. </item>
+        <item>Sekelompok anak laki-laki yang beranjak dewasa menjadi remaja yang memulai petualangan epik di San Fernando Valley untuk memperbaiki mainan mereka yang rusak sebelum orang tua mereka pulang. </item>
+        <item>Pembunuh super John Wick kembali dengan label harga $14 di kepalanya dan sepasukan pembunuh pemburu bayaran di jalurnya. Setelah membunuh anggota dari guild pembunuh internasional bayangan, High Table, John Wick adalah ekskomunikasi, tetapi pria dan wanita hit paling kejam di dunia menunggu setiap kesempatannya. </item>
+        <item>Mengikuti upaya heroik agensi crypto-zoological Monarch ketika anggotanya berhadapan dengan baterai monster berukuran dewa, termasuk Godzilla yang perkasa, yang bertabrakan dengan Mothra, Rodan, dan musuh bebuyutannya, Raja berkepala tiga. Ghidorah. Ketika spesies super kuno ini - yang dianggap sebagai mitos belaka - bangkit kembali, mereka semua bersaing untuk supremasi, membuat keberadaan manusia sangat tergantung dalam keseimbangan. </item>
+    </string-array>
+
+    <integer-array name="movie_banner">
+        <item>@drawable/fastfurious</item>
+        <item>@drawable/thelionking</item>
+        <item>@drawable/meninblack</item>
+        <item>@drawable/avengers</item>
+        <item>@drawable/redshoes</item>
+        <item>@drawable/hellolove</item>
+        <item>@drawable/angelhasfalen</item>
+        <item>@drawable/goodboy</item>
+        <item>@drawable/johnwick</item>
+        <item>@drawable/godzila</item>
+    </integer-array>
+
+    <integer-array name="movie_year">
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+    </integer-array>
+
+    <array name="movie_ratting">
+        <item>5</item>
+        <item>5</item>
+        <item>4.5</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+        <item>5</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+    </array>
+
+    <!--tv_shows-->
+    <string-array name="tv_shows_title">
+        <item>Wu Assassins</item>
+        <item>The Boys</item>
+        <item>Doom Patrol </item>
+        <item>Pennyworth</item>
+        <item>Carnival Row</item>
+        <item>Chernobyl</item>
+        <item>The I-Land</item>
+        <item>The Spy</item>
+        <item>Wu-Tang: An American Saga</item>
+        <item>Unbelievable</item>
+    </string-array>
+
+    <string-array name="tv_shows_description">
+        <item>Yang terakhir dalam barisan Chosen Ones, seorang chef wannabe bergabung dengan seorang detektif pembunuhan untuk mengungkap misteri kuno dan mencatat pembunuh supranatural. </item>
+        <item>Sekelompok penjaga yang dikenal secara informal sebagai \"The Boys \" berangkat untuk menjatuhkan superhero korup dengan tidak lebih dari grit kerah biru dan kemauan untuk melawan kotor. </item>
+        <item>Anggota Patroli Doom masing-masing mengalami kecelakaan mengerikan yang memberi mereka kemampuan manusia super - tetapi juga membuat mereka terluka dan cacat. Trauma dan tertindas, tim menemukan tujuan melalui Ketua, yang menyatukan mereka untuk menyelidiki fenomena paling aneh yang ada - dan untuk melindungi Bumi dari apa yang mereka temukan. </item>
+        <item>Kisah asal-usul kepala pelayan Bruce Wayne yang legendaris, Alfred Pennyworth, mantan prajurit SAS Inggris yang membentuk perusahaan keamanan dan mulai bekerja dengan Thomas Wayne, ayah miliarder Bruce, di London tahun 1960-an. </item>
+        <item>Di kota mistis dan gelap yang dipenuhi manusia, peri, dan makhluk lainnya, seorang detektif polisi menyelidiki serangkaian pembunuhan mengerikan yang ditujukan pada populasi peri. Selama penyelidikan, detektif menjadi tersangka utama dan harus menemukan pembunuh yang sebenarnya untuk membersihkan namanya. </item>
+        <item>Dramatisasi kisah nyata dari salah satu bencana buatan manusia terburuk dalam sejarah, kecelakaan nuklir bencana besar di Chernobyl. Sebuah kisah tentang pria dan wanita pemberani yang berkorban untuk menyelamatkan Eropa dari bencana yang tak terbayangkan. </item>
+        <item>Dihapus bersih dari ingatan dan dilempar bersama, sekelompok orang asing berjuang untuk selamat dari kenyataan pahit - dan pulau yang menjebak mereka. </item>
+        <item>Pada tahun 1960-an, petugas Israel yang menjadi agen rahasia Eli Cohen melakukan penyamaran yang mendalam di Suriah dalam misi berbahaya selama bertahun-tahun untuk memata-matai Mossad. </item>
+        <item>Pada awal 1990-an di New York, selama puncak epidemi kokain, seorang musisi visioner bernama Bobby Diggs alias RZA mulai membentuk kelompok super selusin pemuda, pria kulit hitam, yang pada akhirnya akan naik untuk menjadi salah satu kisah sukses yang paling tidak disukai dalam sejarah musik Amerika. </item>
+        <item>Seorang remaja dituduh berbohong tentang tuduhan pemerkosaannya, tetapi dua detektif wanita investigasi yang teguh menemukan kebenaran yang jauh lebih menyeramkan. </item>
+    </string-array>
+
+    <integer-array name="tv_shows_banner">
+        <item>@drawable/wu</item>
+        <item>@drawable/theboys</item>
+        <item>@drawable/doom</item>
+        <item>@drawable/penny</item>
+        <item>@drawable/cher</item>
+        <item>@drawable/carnival</item>
+        <item>@drawable/theiland</item>
+        <item>@drawable/spy</item>
+        <item>@drawable/wutang</item>
+        <item>@drawable/unavailable</item>
+    </integer-array>
+
+    <integer-array name="tv_shows_year">
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+    </integer-array>
+
+    <array name="tv_shows_ratting">
+        <item>5</item>
+        <item>4</item>
+        <item>3.5</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+        <item>4</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+    </array>
+
+</resources>

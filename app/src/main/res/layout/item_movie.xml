@@ -1,44 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
     
-    <ImageView
-        android:padding="10dp"
-        android:id="@+id/banner"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_marginLeft="@dimen/margin_horizontal_normal"
+        android:layout_marginRight="@dimen/margin_horizontal_normal"
+        android:layout_marginTop="@dimen/margin_vertical_medium"
+        android:layout_marginBottom="@dimen/margin_vertical_medium"
         android:layout_width="110dp"
-        android:layout_height="140dp"
-        android:scaleType="fitStart"/>
+        android:layout_height="150dp"
+        app:cardCornerRadius="@dimen/margin_vertical_medium"
+        app:cardElevation="0dp">
+        <ImageView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wu"
+            android:contentDescription="@string/banner" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/title"
         android:textSize="21sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margin_horizontal_normal"
         android:textColor="@color/colorTextPrimary"
-        android:layout_toEndOf="@id/banner"
-        android:layout_toRightOf="@id/banner"
+        android:layout_toEndOf="@id/card"
+        android:layout_toRightOf="@id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/right_margin"
-        android:layout_marginEnd="@dimen/right_margin"/>
+        android:layout_marginRight="@dimen/margin_horizontal_normal"
+        android:layout_marginEnd="@dimen/margin_horizontal_normal"/>
 
     <TextView
         android:id="@+id/year"
         android:textColor="@color/colorTextSecondary"
         android:layout_below="@id/title"
-        android:layout_toEndOf="@id/banner"
-        android:layout_toRightOf="@id/banner"
+        android:layout_toEndOf="@id/card"
+        android:layout_toRightOf="@id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/right_margin"
-        android:layout_marginEnd="@dimen/right_margin" />
+        android:layout_marginRight="@dimen/margin_horizontal_normal"
+        android:layout_marginEnd="@dimen/margin_horizontal_normal" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_below="@id/year"
-        android:layout_toEndOf="@id/banner"
+        android:layout_toEndOf="@id/card"
         android:layout_toRightOf="@id/year"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"

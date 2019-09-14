@@ -2,4 +2,142 @@
     <string name="app_name">Popular Movie 2019</string>
     <string name="overview">OVERVIEW</string>
     <string name="banner">banner</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">TV Shows</string>
+    
+    <!--DATA-->
+
+    <!--movies-->
+    <string-array name="movie_title">
+        <item>Fast &amp; Furious Presents: Hobbs &amp; Shaw</item>
+        <item>The Lion King</item>
+        <item>Men in Black: International</item>
+        <item>Avengers: Endgame</item>
+        <item>Red Shoes and the Seven Dwarfs</item>
+        <item>Hello, Love, Goodbye</item>
+        <item>Angel Has Fallen</item>
+        <item>Good Boys</item>
+        <item>John Wick: Chapter 3 – Parabellum</item>
+        <item>Godzilla: King of the Monsters</item>
+    </string-array>
+
+    <string-array name="movie_description">
+        <item>A spinoff of The Fate of the Furious, focusing on Johnson\'s US Diplomatic Security Agent Luke Hobbs forming an unlikely alliance with Statham\'s Deckard Shaw. </item>
+        <item>Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub\'s arrival. Scar, Mufasa\'s brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba\'s exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.</item>
+        <item>The Men in Black have always protected the Earth from the scum of the universe. In this new adventure, they tackle their biggest, most global threat to date: a mole in the Men in Black organization.</item>
+        <item>After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos\' actions and restore order to the universe once and for all, no matter what consequences may be in store.</item>
+        <item>Princes who have been turned into Dwarfs seek the red shoes of a lady in order to break the spell, although it will not be easy.</item>
+        <item>A love story of Joy and Ethan, Filipino workers based in Hong Kong. Ethan, a bartender, is keen on romantically pursuing Joy, a domestic helper who is wholly dedicated to providing for her family.</item>
+        <item>Secret Service Agent Mike Banning is framed for the attempted assassination of the President and must evade his own agency and the FBI as he tries to uncover the real threat. </item>
+        <item>A group of young boys on the cusp of becoming teenagers embark on an epic quest in the San Fernando Valley to fix their broken toy before their parents get home.</item>
+        <item>Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin\’s guild, the High Table, John Wick is excommunicado, but the world\’s most ruthless hit men and women await his every turn.</item>
+        <item>Follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species - thought to be mere myths - rise again, they all vie for supremacy, leaving humanity\'s very existence hanging in the balance.</item>
+    </string-array>
+
+    <integer-array name="movie_banner">
+        <item>@drawable/fastfurious</item>
+        <item>@drawable/thelionking</item>
+        <item>@drawable/meninblack</item>
+        <item>@drawable/avengers</item>
+        <item>@drawable/redshoes</item>
+        <item>@drawable/hellolove</item>
+        <item>@drawable/angelhasfalen</item>
+        <item>@drawable/goodboy</item>
+        <item>@drawable/johnwick</item>
+        <item>@drawable/godzila</item>
+    </integer-array>
+
+    <integer-array name="movie_year">
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+    </integer-array>
+
+    <array name="movie_ratting">
+        <item>5</item>
+        <item>5</item>
+        <item>4.5</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+        <item>5</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+    </array>
+    
+    <!--tv_shows-->
+    <string-array name="tv_shows_title">
+        <item>Wu Assassins</item>
+        <item>The Boys</item>
+        <item>Doom Patrol </item>
+        <item>Pennyworth</item>
+        <item>Carnival Row</item>
+        <item>Chernobyl</item>
+        <item>The I-Land</item>
+        <item>The Spy</item>
+        <item>Wu-Tang: An American Saga</item>
+        <item>Unbelievable</item>
+    </string-array>
+    
+    <string-array name="tv_shows_description">
+        <item>The last in a line of Chosen Ones, a wannabe chef teams up with a homicide detective to unravel an ancient mystery and take down supernatural assassins.</item>
+        <item>A group of vigilantes known informally as \“The Boys\” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty.</item>
+        <item>The Doom Patrol\’s members each suffered horrible accidents that gave them superhuman abilities — but also left them scarred and disfigured. Traumatized and downtrodden, the team found purpose through The Chief, who brought them together to investigate the weirdest phenomena in existence — and to protect Earth from what they find.</item>
+        <item>The origin story of Bruce Wayne\'s legendary butler, Alfred Pennyworth, a former British SAS soldier who forms a security company and goes to work with Thomas Wayne, Bruce\'s billionaire father, in 1960s London.</item>
+        <item>In a mystical and dark city filled with humans, fairies and other creatures, a police detective investigates a series of gruesome murders leveled against the fairy population. During his investigation, the detective becomes the prime suspect and must find the real killer to clear his name.</item>
+        <item>A dramatization of the true story of one of the worst man-made catastrophes in history, the catastrophic nuclear accident at Chernobyl. A tale of the brave men and women who sacrificed to save Europe from unimaginable disaster.</item>
+        <item>Wiped clean of memories and thrown together, a group of strangers fight to survive harsh realities - and the island that traps them.</item>
+        <item>In the 1960s, Israeli clerk-turned-secret agent Eli Cohen goes deep undercover inside Syria on a perilous, years-long mission to spy for Mossad.</item>
+        <item>In the early 1990\'s in New York, during the height of the crack cocaine epidemic, a visionary musician named Bobby Diggs aka The RZA begins to form a super group of a dozen young, black men, who will eventually rise to become one of the unlikeliest success stories in American music history.</item>
+        <item>A teenager is charged with lying about her rape allegation, but two determined investigative female detectives discover a far more sinister truth.</item>
+    </string-array>
+
+    <integer-array name="tv_shows_banner">
+         <item>@drawable/wu</item>
+        <item>@drawable/theboys</item>
+        <item>@drawable/doom</item>
+        <item>@drawable/penny</item>
+        <item>@drawable/cher</item>
+        <item>@drawable/carnival</item>
+        <item>@drawable/theiland</item>
+        <item>@drawable/spy</item>
+        <item>@drawable/wutang</item>
+        <item>@drawable/unavailable</item>
+    </integer-array>
+    
+    <integer-array name="tv_shows_year">
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+        <item>2019</item>
+    </integer-array>
+
+    <array name="tv_shows_ratting">
+        <item>5</item>
+        <item>4</item>
+        <item>3.5</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+        <item>4</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+    </array>
+    
 </resources>

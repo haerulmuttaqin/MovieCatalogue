@@ -3,7 +3,7 @@ package com.haerul.dicoding_made.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Movie implements Parcelable {
+public class Data implements Parcelable {
     
     private String title;
     private String description;
@@ -11,7 +11,7 @@ public class Movie implements Parcelable {
     private int year;
     private float rating;
 
-    Movie(String title, String description, int banner, int year, float rating) {
+    Data(String title, String description, int banner, int year, float rating) {
         this.title = title;
         this.description = description;
         this.banner = banner;
@@ -53,7 +53,7 @@ public class Movie implements Parcelable {
         dest.writeFloat(this.rating);
     }
 
-    private Movie(Parcel in) {
+    private Data(Parcel in) {
         title = in.readString();
         description = in.readString();
         banner = in.readInt();
@@ -61,15 +61,15 @@ public class Movie implements Parcelable {
         rating = in.readFloat();
     }
 
-    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
+    public static final Creator<Data> CREATOR = new Creator<Data>() {
         @Override
-        public Movie createFromParcel(Parcel in) {
-            return new Movie(in);
+        public Data createFromParcel(Parcel in) {
+            return new Data(in);
         }
 
         @Override
-        public Movie[] newArray(int size) {
-            return new Movie[size];
+        public Data[] newArray(int size) {
+            return new Data[size];
         }
     };
 }
