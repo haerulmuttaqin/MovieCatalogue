@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Popular Movie 2019</string>
+    <string name="app_name">Movie Catalogue</string>
     <string name="overview">OVERVIEW</string>
     <string name="banner">banner</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="retry">Retry</string>
 </resources>

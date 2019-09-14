@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@+id/card"
+        android:layout_marginLeft="@dimen/margin_horizontal_normal"
+        android:layout_marginRight="@dimen/margin_horizontal_normal"
+        android:layout_marginTop="@dimen/margin_vertical_medium"
+        android:layout_marginBottom="@dimen/margin_vertical_medium"
+        android:layout_width="@dimen/poster_width"
+        android:layout_height="@dimen/poster_height"
+        android:background="@drawable/bg_placeholder" />
+
+    <View
+        android:id="@+id/title"
+        android:background="@drawable/bg_placeholder"
+        android:layout_marginTop="@dimen/margin_horizontal_large"
+        android:layout_toEndOf="@id/card"
+        android:layout_toRightOf="@id/card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_horizontal_normal"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_marginEnd="@dimen/large_margin" />
+
+    <View
+        android:id="@+id/year"
+        android:background="@drawable/bg_placeholder"
+        android:layout_below="@id/title"
+        android:layout_toEndOf="@id/card"
+        android:layout_toRightOf="@id/card"
+        android:layout_width="@dimen/large_margin"
+        android:layout_height="@dimen/margin_vertical_medium"
+        android:layout_marginTop="@dimen/margin_vertical_medium"
+        android:layout_marginRight="@dimen/margin_horizontal_normal"
+        android:layout_marginEnd="@dimen/margin_horizontal_normal" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_below="@id/year"
+        android:layout_toEndOf="@id/card"
+        android:layout_toRightOf="@id/year"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

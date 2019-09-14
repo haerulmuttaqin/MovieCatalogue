@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.haerul.dicoding_made.data.model.Movie.Result" />
+            type="com.haerul.dicoding_made.data.model.TvShow.Result" />
 
         <variable
             name="viewModel"
@@ -13,7 +13,7 @@
     </data>
 
     <RelativeLayout
-        android:onClick="@{() -> viewModel.onMovieClick(item)}"
+        android:onClick="@{() -> viewModel.onTvShowClick(item)}"
         android:clickable="true"
         android:focusable="true"
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:text="@{item.original_title}"
+            android:text="@{item.original_name}"
             android:id="@+id/title"
             android:textSize="21sp"
             android:layout_marginTop="@dimen/margin_horizontal_normal"
@@ -54,7 +54,7 @@
             android:layout_marginEnd="@dimen/margin_horizontal_normal" />
 
         <TextView
-            android:text="@{item.getReleaseDate()}"
+            android:text="@{item.getFirstAirDate()}"
             android:id="@+id/year"
             android:textColor="@color/colorTextSecondary"
             android:layout_below="@id/title"

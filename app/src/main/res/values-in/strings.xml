@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="overview">KILASAN SINGKAT</string>
+    <string name="banner">banner</string>
+    <string name="change_language_settings">Pengaturan Ubah Bahasa</string>
+    <string name="movies">Film</string>
+    <string name="tv_shows">Acara TV</string>
+    <string name="retry">Coba Lagi</string>
+</resources>

@@ -14,15 +14,71 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/discover/\"")
+            buildConfigField("String", "BASE_URL_IMAGE", "\"https://image.tmdb.org/t/p/w185/\"")
+            buildConfigField("String", "API_KEY", "\"710c2f2a12afed796678c7144104b344\"")
         }
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/discover/\"")
+            buildConfigField("String", "BASE_URL_IMAGE", "\"https://image.tmdb.org/t/p/w185/\"")
+            buildConfigField("String", "API_KEY", "\"710c2f2a12afed796678c7144104b344\"")
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    dataBinding {
+        enabled = true
     }
 }
 
 dependencies {
+
+    def arch_version = "2.1.0"
+    def dagger_version = "2.15"
+    def dagger_android = "2.16"
+    def glide_version = "4.9.0"
+    def circle_image = "3.0.2"
+    def retrofit_version = "2.5.0"
+    def retrofit_gson = "2.2.0"
+    def okhttp_version = "3.12.0"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "com.google.android.material:material:1.0.0"
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    // arch
+    implementation "androidx.lifecycle:lifecycle-extensions:$arch_version"
+    annotationProcessor "androidx.lifecycle:lifecycle-common-java8:$arch_version"
+
+    // network
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_gson"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    // di
+    implementation "com.google.dagger:dagger:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_android"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_android"
+
+    // image
+    implementation "com.mikhaellopez:circularimageview:$circle_image"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+
+    // other
+    implementation 'com.facebook.shimmer:shimmer:0.4.0@aar'
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
