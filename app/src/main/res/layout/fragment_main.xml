@@ -57,9 +57,8 @@
 
         <LinearLayout
             android:id="@+id/emptyView"
-            android:visibility="@{viewModel.throwMessage == null ? View.GONE : View.VISIBLE}"
+            android:visibility="gone"
             android:orientation="vertical"
-            android:background="@color/colorWhite"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -71,7 +70,7 @@
                 android:layout_gravity="center" />
 
             <TextView
-                android:text="@{viewModel.throwMessage}"
+                android:id="@+id/errorMessage"
                 android:gravity="center"
                 android:padding="16dp"
                 android:layout_width="match_parent"

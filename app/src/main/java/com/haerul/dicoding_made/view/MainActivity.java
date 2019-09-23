@@ -3,6 +3,7 @@ package com.haerul.dicoding_made.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -12,12 +13,12 @@ import com.google.android.material.tabs.TabLayout;
 import com.haerul.dicoding_made.R;
 import com.haerul.dicoding_made.adapter.ViewPagerAdapter;
 import com.haerul.dicoding_made.base.BaseActivity;
-import com.haerul.dicoding_made.databinding.ActivityMainBinding;
+import com.haerul.dicoding_made.databinding.ActivityMainsBinding;
 import com.haerul.dicoding_made.utils.Constants;
 
-public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewModel> {
+public class MainActivity extends BaseActivity<ActivityMainsBinding, MainViewModel> {
 
-    private ActivityMainBinding mBinding;
+    private ActivityMainsBinding mBinding;
 
     @Override
     public int getBindingVariable() {
@@ -26,7 +27,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_main;
+        return R.layout.activity_mains;
     }
 
     @Override
@@ -50,7 +51,9 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
         mBinding.tabLayout.setupWithViewPager(mBinding.viewPager);
         mBinding.viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mBinding.tabLayout));
         mBinding.viewPager.setCurrentItem(0);
+        mBinding.viewPager.setOffscreenPageLimit(2);
         adapter.notifyDataSetChanged();
+        Log.w("TAG", "view pagger created");
     }
 
     @Override

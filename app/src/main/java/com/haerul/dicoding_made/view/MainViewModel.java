@@ -1,7 +1,6 @@
 package com.haerul.dicoding_made.view;
 
 import androidx.annotation.NonNull;
-import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
@@ -17,18 +16,15 @@ import retrofit2.Response;
 
 public class MainViewModel extends BaseViewModel<MainViewModel.MainNavigator> {
 
-    public ObservableField<String> throwMessage;
     public MutableLiveData<Movie> movieData = new MutableLiveData<>();
     public MutableLiveData<TvShow> tvShowData = new MutableLiveData<>();
 
     private MainViewModel(ConnectionServer connectionServer) {
         super(connectionServer);
-        throwMessage = new ObservableField<>(null);
     }
 
     public void getMovieResult() {
         setIsLoading(true);
-        throwMessage.set(null);
         getConnectionServer().getMovies().enqueue(new Callback<Movie>() {
             @Override
             public void onResponse(@NonNull Call<Movie> call, @NonNull Response<Movie> response) {
@@ -37,8 +33,7 @@ public class MainViewModel extends BaseViewModel<MainViewModel.MainNavigator> {
                     movieData.setValue(response.body());
                     getNavigator().result(true, null);
                 } else {
-                    throwMessage.set("No result for movies!");
-                    getNavigator().result(false, throwMessage.get());
+                    getNavigator().result(false, "No data to fetch");
                 }
             }
 
@@ -46,15 +41,13 @@ public class MainViewModel extends BaseViewModel<MainViewModel.MainNavigator> {
             public void onFailure(@NonNull Call<Movie> call, @NonNull Throwable t) {
                 t.printStackTrace();
                 setIsLoading(false);
-                throwMessage.set("Failed to connect!");
-                getNavigator().result(false, throwMessage.get());
+                getNavigator().result(false, "Failed to connect");
             }
         });
     }
 
     public void getTvShowResult() {
         setIsLoading(true);
-        throwMessage.set(null);
         getConnectionServer().getTvShows().enqueue(new Callback<TvShow>() {
             @Override
             public void onResponse(@NonNull Call<TvShow> call, @NonNull Response<TvShow> response) {
@@ -63,16 +56,15 @@ public class MainViewModel extends BaseViewModel<MainViewModel.MainNavigator> {
                     tvShowData.setValue(response.body());
                     getNavigator().result(true, null);
                 } else {
-                    throwMessage.set("No result for tv shows!");
-                    getNavigator().result(false, throwMessage.get());
+                    getNavigator().result(false, "No data to fetch");
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<TvShow> call, @NonNull Throwable t) {
                 t.printStackTrace();
-                throwMessage.set("Failed to connect!");
-                getNavigator().result(false, throwMessage.get());
+                setIsLoading(false);
+                getNavigator().result(false, "Failed to connect");
             }
         });
     }

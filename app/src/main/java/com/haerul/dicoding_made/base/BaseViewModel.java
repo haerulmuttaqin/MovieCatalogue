@@ -10,7 +10,6 @@ import java.lang.ref.WeakReference;
 public abstract class BaseViewModel<N> extends ViewModel {
 
     private final ObservableBoolean isLoading = new ObservableBoolean(false);
-    private final ObservableBoolean isConnecting = new ObservableBoolean(false);
 
     private WeakReference<N> navigator;
 
@@ -40,15 +39,7 @@ public abstract class BaseViewModel<N> extends ViewModel {
     public void setNavigator(N navigator) {
         this.navigator = new WeakReference<>(navigator);
     }
-
-    public ObservableBoolean getIsConnecting() {
-        return isConnecting;
-    }
-
-    public void setIsConnecting(boolean isConnecting) {
-        this.isConnecting.set(isConnecting);
-    }
-
+    
     public ConnectionServer getConnectionServer() {
         return connectionServer;
     }

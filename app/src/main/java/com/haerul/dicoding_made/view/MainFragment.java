@@ -2,13 +2,13 @@ package com.haerul.dicoding_made.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.haerul.dicoding_made.R;
 import com.haerul.dicoding_made.adapter.MovieAdapter;
 import com.haerul.dicoding_made.adapter.TvShowAdapter;
@@ -58,6 +58,7 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, MainViewMode
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Log.w("TAG", "on view created");
         mBinding = getViewDataBinding();
         mViewModel = ViewModelProviders.of(getBaseActivity(), new MainViewModel.ModelFactory(connectionServer)).get(MainViewModel.class);
         mViewModel.setNavigator(this);
@@ -65,20 +66,35 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, MainViewMode
 
         if (getArguments() != null) {
             String typeOfList = getArguments().getString(KEY_DATA);
-
             if (typeOfList != null && typeOfList.equals(Constants.TYPE_MOVIE)) {
-                mBinding.swipeRefresh.setOnRefreshListener(() -> mViewModel.getMovieResult());
-                mBinding.retry.setOnClickListener(v -> mViewModel.getMovieResult());
                 mViewModel.getMovieResult();
+                mBinding.swipeRefresh.setOnRefreshListener(() -> mViewModel.getMovieResult());
+                mBinding.retry.setOnClickListener(v -> {
+                    mBinding.emptyView.setVisibility(View.GONE);
+                    mViewModel.getMovieResult();
+                });
                 mViewModel.movieData.observe(this, movies -> {
-                    mBinding.recyclerView.setAdapter(new MovieAdapter(movies.results, mViewModel));
+                    if (movies.results.size() > 0) {
+                        mBinding.recyclerView.setAdapter(new MovieAdapter(movies.results, mViewModel));
+                        mBinding.emptyView.setVisibility(View.GONE);
+                    } else {
+                        mBinding.emptyView.setVisibility(View.VISIBLE);
+                    }
                 });
             } else {
-                mBinding.swipeRefresh.setOnRefreshListener(() -> mViewModel.getTvShowResult());
-                mBinding.retry.setOnClickListener(v -> mViewModel.getTvShowResult());
                 mViewModel.getTvShowResult();
+                mBinding.swipeRefresh.setOnRefreshListener(() -> mViewModel.getTvShowResult());
+                mBinding.retry.setOnClickListener(v -> {
+                    mBinding.emptyView.setVisibility(View.GONE);
+                    mViewModel.getTvShowResult();
+                });
                 mViewModel.tvShowData.observe(this, tvShow -> {
-                    mBinding.recyclerView.setAdapter(new TvShowAdapter(tvShow.results, mViewModel));
+                    if (tvShow.results.size() > 0) {
+                        mBinding.recyclerView.setAdapter(new TvShowAdapter(tvShow.results, mViewModel));
+                        mBinding.emptyView.setVisibility(View.GONE);
+                    } else {
+                        mBinding.emptyView.setVisibility(View.VISIBLE);
+                    }
                 });
             }
         }
@@ -87,7 +103,8 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, MainViewMode
     @Override
     public void result(boolean isSuccess, String message) {
         if (!isSuccess) {
-            Snackbar.make(mBinding.getRoot(), message, Snackbar.LENGTH_SHORT).show();
+            mBinding.errorMessage.setText(message);
+            mBinding.shimmerViewContainer.stopShimmer();
         }
     }
 

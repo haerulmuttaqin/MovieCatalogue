@@ -135,7 +135,7 @@
             android:layout_height="match_parent"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 app:layout_anchor="@id/appbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -147,22 +147,33 @@
                     android:id="@+id/overview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_vertical_large"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
                     android:text="@string/overview"
                     android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/subtitle_text_size" />
+                    android:textSize="@dimen/subtitle_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:text="@{movie == null ? tv.overview : movie.overview}"
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_vertical_normal"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
                     android:lineSpacingExtra="@dimen/line_spacing_description_text"
+                    android:text="@{movie == null ? tv.overview : movie.overview}"
                     android:textColor="@color/colorTextPrimary"
-                    android:textSize="@dimen/description_text_size" />
+                    android:textSize="@dimen/description_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/overview" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.core.widget.NestedScrollView>
 
